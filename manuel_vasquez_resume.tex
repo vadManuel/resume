@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[left=1cm, right=1cm, vmargin=1cm]{geometry}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath, amssymb, array, booktabs, multicol}
+
+\newcommand{\name}{Manuel Vasquez}
+\newcommand{\website}{http://www.vadmanuel.com}
+\newcommand{\email}{vadmanuel@knights.ucf.edu}
+\newcommand{\phone}{(407) 914-0175}
+\newcommand{\makeminipage}[4]{
+    \begin{minipage}[c]{9cm}
+        \flushleft #1 \\ #2
+    \end{minipage} \hfill
+    \begin{minipage}[c]{9cm}
+        \flushright #3 \\ #4
+    \end{minipage}
+}
+\newcommand{\makesection}[1]{\hrule\vskip1mm\uppercase{#1}\vskip1mm\hrule}
+\pagenumbering{gobble}
+
+\begin{document}
+    \setlength{\parindent}{0cm}
+
+    \makeminipage
+        {{\large\textbf{\name}}}
+        {\website}
+        {Email: \email}
+        {Phone: \phone}
+    \bigbreak
+
+    \makesection{Education}
+    \begin{itemize}[leftmargin=.35cm]
+        \item \makeminipage
+            {\textbf{University of Central Florida}}
+            {\textit{Bachelor of Engineering in Computer Science; GPA: 3.00}}
+            {\textit{Orlando, FL}}
+            {\textit{Summer 2020}}
+    \end{itemize}
+
+    \makesection{Projects}
+    \begin{itemize}[leftmargin=.35cm]
+        \item \textbf{UCF101-Sports dataset action recognition} \\
+        Utilized Google's Inception network to extract features and passed them to an RNN
+        in order to maintain spatiotemporal information. Due to the size of the dataset, I
+        used LOO cross-validation and achieved a validation accuracy of 72.87\% on the 10
+        different actions.
+        \item \textbf{DJI Tello active hand tracking} \\
+        Gave a Tello drone the ability to be controlled by the palm of a single user. Utilizing
+        the 11k Hands database by Mahmoud, I was able to train a model to track the palm of the
+        user. The drone maintains the palm of the user centered in its field of view.
+        \item \textbf{\textit{KnightyKnights.com} a MERN stack contact manager} \\
+        Our team was comprised of 5 members and had 20 days to build a contact manager with the
+        web stack of our choice, we agreed to implement a MERN stack. As the team project manager,
+        I implemented the Agile methodology in order to accept changes that might come later on.
+        In order to speed up the building phase of each step we all learned each component of
+        the stack and branched our submissions on Github.
+        \item \textbf{MNIST dataset handwritten digit recognition} \\
+        Using a ConvNet achieved 99.23\% validation accuracy using a 30\% validation set.
+        Trained with SGD (learning rate=0.1) with a total of 60 epochs, mini-batch size of 10,
+        and Dropout (rate=0.5) for regularization.
+        \item \textbf{Kinetics-600 dataset action recognition using I3D} \\
+        A recent project in which I move forward from older technologies. I attempt to
+        decompose and re-engineer the Two-Stream Inflated 3D ConvNet created by Carreira
+        and Zisserman.
+        \item \textbf{Dynamically aimed refreshments cooler with skeleton tracking} \\
+        A current project where I use optical flow to lower the computational cost of tracking
+        more than a single skeleton with a Kinect V2. The project's objective is to track the
+        user, count the number of fingers they are holding up and launch a can from the
+        appropriate compartment to the user at a variable distance.
+
+    \end{itemize}
+    \makesection{Clubs | Activities | Certification}
+    \begin{itemize}[leftmargin=.35cm]
+        \item \textbf{UCF Robotics Club} Laki2 Drone Payload Delivery Team \\
+        This drone is the Robotics Club's first entry into the AUVSI SUAS competition. My task
+        in this project was to create shape and character recognition models. We ran into data
+        issues from the beginning since all we had was artificially created pictures of the
+        landscape, so I was also tasked with creating an image generator as a method to train
+        the relaxed shape and character recognition models.
+        \item \textbf{AI@UCF} Fall and Spring semester Coordinator position candidate
+        \vspace*{-.05cm}
+        \begin{itemize}[$\circ$]
+            \item \textbf{Intelligence:} We were tasked with reading and analysing a research
+            paper weekly. Once a week we met to discuss issues, questions, or simply what we
+            thought about the paper.
+            \item \textbf{Course:} The club met once a week to discuss and implement practical
+            applications of the current week's topic. We would then code up working examples on
+            Google Colab.
+        \end{itemize}
+        \item \textbf{UCF Programming Team:} Members meet every Saturday morning for a 2-hour lecture
+        and 4-hour mock contest.
+        \item \textbf{Coursera Machine Learning by Andrew Ng}
+        \item \textbf{SHPE} Member, \textbf{Knight Hacks} 48-hour participant, and granted access to the \textbf{Stokes cluster}
+    \end{itemize}
+        
+    \makesection{Programming Languages and Technologies}
+    \vspace*{-2mm}
+    \begin{multicols}{2}\begin{itemize}[leftmargin=.35cm]
+        \setlength\itemsep{0cm}
+        \item Arduino C, C++, C\#, \LaTeX, Java, Javascript, Python
+        \item Amazon Web Services
+        \item Google Cloud Services
+        \item Keras TensorFlow
+        \item PyTorch
+        \item \textbf{M}ongoDB, \textbf{E}xpress.js, \textbf{R}eact.js, \textbf{N}ode.js
+        \item Redux.js
+        \item React Native framework
+    \end{itemize}\end{multicols}
+\end{document}
