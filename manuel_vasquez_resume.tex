@@ -1,17 +1,18 @@
 \documentclass{article}
-\usepackage[left=1cm, right=1cm, vmargin=.75cm]{geometry}
+\usepackage[hmargin=.75cm, vmargin=.75cm]{geometry}
 \usepackage[shortlabels,inline]{enumitem}
-\usepackage{amsmath, amssymb, array, booktabs, multicol}
+\usepackage{amsmath, amssymb, array, booktabs, multicol, multirow}
 
 \newcommand{\name}{Manuel Vasquez}
-\newcommand{\website}{http://www.vadmanuel.com}
+\newcommand{\website}{www.linkedin.com/in/vadmanuel}
+% \newcommand{\website}{http://www.vadmanuel.com}
 \newcommand{\email}{vadmanuel@knights.ucf.edu}
 \newcommand{\phone}{(407) 914-0175}
 \newcommand{\makeminipage}[4]{
-    \begin{minipage}[c]{9cm}
+    \begin{minipage}[c]{.7\linewidth}
         \flushleft #1 \\ #2
     \end{minipage} \hfill
-    \begin{minipage}[c]{9cm}
+    \begin{minipage}[c]{.29\linewidth}
         \flushright #3 \\ #4
     \end{minipage}
 }
@@ -19,95 +20,73 @@
 \pagenumbering{gobble}
 
 \begin{document}
-    \setlength{\parindent}{0cm}
+\setlength{\parindent}{0cm}
 
+\makeminipage
+    {{\large\textbf{\name}}}
+    {\website}
+    {Email: \email}
+    {Phone: \phone}
+\bigbreak
+
+\makesection{Education}
+\begin{itemize}[leftmargin=.35cm]
+    \item {
     \makeminipage
-        {{\large\textbf{\name}}}
-        {\website}
-        {Email: \email}
-        {Phone: \phone}
-    \bigbreak
+        {\textbf{University of Central Florida}}
+        {\textit{Bachelor of Science in Computer Science}\hspace*{2mm} \textit{GPA: 3.0} \\
+        \textit{Minor in Statistics}\hspace*{36.4mm} \textit{GPA: 3.7}}
+        {Orlando, FL}
+        {Spring 2021}
+    }
+\end{itemize}
 
-    \makesection{Education}
-    \begin{itemize}[leftmargin=.35cm]
-        \item \makeminipage
-            {\textbf{University of Central Florida}}
-            {\textit{Bachelor of Engineering in Computer Science; GPA: 3.00}}
-            {\textit{Orlando, FL}}
-            {\textit{Summer 2020}}
-    \end{itemize}
+\makesection{Professional Experience}
+\begin{itemize}[leftmargin=.35cm]
+    \item {
+        \makeminipage
+            {\textbf{Software Engineer Intern at Viable Engineering Solutions}}
+            {wwww.viablees.com | \textit{Contact information available upon request.}}
+            {Orlando, FL}
+            {Jan 2020 - Present}
 
-    \makesection{Projects}
-    \begin{itemize}[leftmargin=.35cm]
-        \item \textbf{UCF101-Sports dataset action recognition} \\
-        Utilized Google's Inception network to extract features and passed them to an RNN
-        in order to maintain spatiotemporal information. Due to the size of the dataset, I
-        used LOO cross-validation and achieved a validation accuracy of 72.87\% on the 10
-        different actions.
-        \item \textbf{DJI Tello active hand tracking} \\
-        Gave a Tello drone the ability to be controlled by the palm of a single user. Utilizing
-        the 11k Hands database by Mahmoud, I was able to train a model to track the palm of the
-        user. I am currently working on a deep belief network which returns keypoints in the hand
-        utilizing the bounded image from the palm detector. The drone maintains the palm of the user centered in its field of view.
-        \item \textbf{\textit{KnightyKnights.com} a fitness tracker} \\
-        Our team was comprised of 5 members and had 30 days to build a mobile application and a web
-        counterpart. We utilized Firebase's Firestore as our database and React to build the client
-        side of our website. The mobile application was built using iOS's Swift language as well as
-        Google's Firebase libraries. Our fitness tracker on the app side is able to track a user's
-        workout via GPS, show the user a map of their current location as well as various statistics,
-        show a live feed of friended posts, participate in competitions, earn coins, and other features.
-        The web side contains all of what the mobile app contains and many statistics regarding user and
-        friends workouts.
-        \item \textbf{Dynamically aimed refreshments cooler with skeleton tracking} \\
-        A current project where I use optical flow to lower the computational cost of tracking
-        more than a single skeleton with a Kinect V2. The project's objective is to track the
-        user, count the number of fingers they are holding up and launch a can from the
-        appropriate compartment to the user at a variable distance.
-        \item \textbf{Kaggle Competitions - Data} \\
-        I've trained and deployed several models utilizing datasets provided in competitions, including:
-        New Your City Airbnb Open Data, PGA Tour Golf Data, Crimes in Boston, Electric Motor Temperature,
-        and several others.
-        \item \textbf{MNIST dataset handwritten digit recognition} \\
-        Using a ConvNet achieved 99.23\% validation accuracy using a 30\% validation set.
-        Trained with SGD (learning rate=0.1) with a total of 60 epochs, mini-batch size of 10,
-        and Dropout (rate=0.5) for regularization.
+        Deployed several iterations of existing internal-use web applications (ASP.NET Core, React.js, Node.js). These applications were required to meet specific security standards to be deployed into a secured Siemens network. Future projects may be developed utilizing Flutter to lower development time. I am slowly transitioning into the rapid prototyping area, which includes the development of attachments for industrial robotic systems.
+    }
+\end{itemize}
 
+\makesection{Projects}
+\begin{itemize}[leftmargin=.35cm]
+    \item \textbf{UCF101-Sports dataset action recognition} \\
+    Utilized Google's Inception network to extract features and passed them to an RNN in order to maintain spatiotemporal information. Due to the size of the dataset, I used LOO cross-validation and achieved a validation accuracy of 72.87\% on the 10 different actions.
+    \item \textbf{DJI Tello active hand tracking} \\
+    Gave a Tello drone the ability to be controlled by the palm of a single user. Utilizing OpenPose I was able to track the skeleton of a user in almost any light condition and even if part of their body was covered. The drone maintains the palm of the user-centred in its field of view.
+    \item \textbf{\textit{KnightyKnights.com} a fitness tracker} \\
+    Our team was comprised of 5 members and had 30 days to build a mobile application and a web counterpart. We utilized Firebase's Firestore as our database and React to build the client-side of our website. The mobile application was built using iOS's Swift language as well as Google's Firebase libraries. Our fitness tracker on the app side is able to track a user's workout via GPS, show the user a map of their current location as well as various statistics, show a live feed of friended posts, participate in competitions, earn coins, and other features. The web site contains all of what the mobile app contains and many statistics regarding user and friends workouts.
+    \item \textbf{Kaggle Competitions - Data} \\
+    I've trained and deployed several models utilizing datasets provided in competitions, including: New Your City Airbnb Open Data, PGA Tour Golf Data, Crimes in Boston, Electric Motor Temperature, and several others.
+\end{itemize}
+\makesection{Clubs | Activities | Certification}
+\begin{itemize}[leftmargin=.35cm]
+    \item \textbf{AI@UCF} Active member since Spring 2019
+    \begin{itemize}[$\circ$]
+        \item \textbf{Core:} Honing and reviewing AI/ML and Data Science in general.
+        \item \textbf{Data Science:} A project-based stem of the AI@UCF club that focuses on honing industry skills through real-world application. We explore untouched datasets and make new discoveries as they relate to the fields of AI, ML, and Data Science in general.
     \end{itemize}
-    \makesection{Clubs | Activities | Certification}
-    \begin{itemize}[leftmargin=.35cm]
-        \item \textbf{AI@UCF} Spring 2020 semester coordinator position 
-        % \vspace*{-.05cm}
-        \begin{itemize}[$\circ$]
-            % \item \textbf{Intelligence:} We were tasked with reading and analysing a research
-            % paper weekly. Once a week we met to discuss issues, questions, or simply what we
-            % thought about the paper.
-            \item \textbf{Core:} Honing and reviewing AI/ML and Data Science in general.
-            \item \textbf{Data Science:} A project-based stem of the AI@UCF club that focuses
-            on honing industry skills through real-world application. We explore untouched
-            datasets, and make new discoveries as they relate to the fields of AI, ML, and
-            Data Science in general.
-        \end{itemize}
-        \item \textbf{UCF Robotics Club} Laki2 Drone Payload Delivery Team \\
-        This drone is the Robotics Club's first entry into the AUVSI SUAS competition. My task
-        in this project was to create shape and character recognition models. We ran into data
-        issues from the beginning since all we had was artificially created pictures of the
-        landscape, so I was also tasked with creating an image generator as a method to train
-        the relaxed shape and character recognition models.
-        \item \textbf{UCF Programming Team:} Members meet every Saturday morning for a 2-hour lecture
-        and 4-hour mock contest.
-        \item \textbf{Coursera Machine Learning by Andrew Ng}
-        % \item \textbf{SHPE} Member, \textbf{Knight Hacks} 48-hour participant, and granted access to the \textbf{Stokes cluster}
-    \end{itemize}
-        
-    \makesection{Programming Languages | Technologies}
-    \vspace*{-2mm}
-    \begin{multicols}{2}\begin{itemize}[leftmargin=.35cm]
-        \setlength\itemsep{-.1cm}
-        \item C, C\#, Java, Javascript, \LaTeX, Python
-        \item Keras TensorFlow, PyTorch
-        \item Unity3D, Unity's MLAgents, OpenAI
-        \item Amazon Web Services, Google Cloud Services, \\
-        SQL, Firebase's Firestore
-        \item MERN Stack, React Native, Swift
-    \end{itemize}\end{multicols}
+    \item \textbf{UCF Robotics Club} Laki2 Drone Payload Delivery Team \\
+    This drone is the Robotics Club's first entry into the AUVSI SUAS competition. My task in this project was to create shape and character recognition models. We ran into data issues from the beginning since all we had was artificially created pictures of the landscape, so I was tasked with training a relaxed baseline model.
+    \item \textbf{UCF Programming Team:} Members meet every Saturday morning for a 2-hour lecture and 4-hour mock contest.
+    \item \textbf{Coursera Machine Learning by Andrew Ng}
+\end{itemize}
+    
+\makesection{Programming Languages | Technologies}
+\vspace*{-2mm}
+\begin{multicols}{2}\begin{itemize}[leftmargin=.35cm]
+    \setlength\itemsep{-.1cm}
+    \item C, C\#, \LaTeX, Javascript, Python, Swift
+    \item Keras TensorFlow, PyTorch
+    \item Unity3D, Unity's MLAgents
+    \item Amazon Web Services, Google Cloud Services
+    \item MySQL, Firebase, MongoDB
+    \item ASP.NET Core, React
+\end{itemize}\end{multicols}
 \end{document}
