@@ -3,6 +3,7 @@
 *.fls
 *.log
 *.txt
+*.out
 *.synctex.gz
 
 .vscode
