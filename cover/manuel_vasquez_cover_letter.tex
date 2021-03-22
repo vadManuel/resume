@@ -1,0 +1,97 @@
+\documentclass{article}
+
+% imports
+\usepackage[vmargin=1in,hmargin=.5in]{geometry}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath, amssymb, array, booktabs, multicol, multirow, hyperref, raleway, tikz}
+\usepackage{parskip}
+\usetikzlibrary{calc}
+
+% typography
+\renewcommand{\familydefault}{\sfdefault}
+
+% custom commands
+\newcommand{\position}{I am writing to apply for the \_ position.}
+\newcommand{\company}{Google }
+\newcommand{\name}{Manuel Vasquez}
+\newcommand{\github}{\href{https://www.github.com/vadmanuel}{Github=vadManuel}}
+\newcommand{\linkedin}{\href{https://www.linkedin.com/in/vadmanuel}{LinkedIn=vadManuel}}
+\newcommand{\email}{\href{mailto:vadmanuel@knights.ucf.edu}{vadmanuel@knights.ucf.edu}}
+\newcommand{\phone}{\href{tel:+14079140175}{+1 (407) 914-0175}}
+
+% no page number
+\pagenumbering{gobble}
+
+
+\begin{document}
+\setlength{\parindent}{0mm}
+
+\begin{minipage}[t]{.29\linewidth}
+    \begin{center}
+        \begin{tikzpicture}[baseline=(ola.center),inner sep=0pt]
+            \clip (0,0)  circle (1.5cm) node (ola) {\includegraphics[width=3cm]{assets/me.png}};
+        \end{tikzpicture}
+    \end{center}
+
+    \vspace*{.5cm}
+    \hrule
+    \vspace*{.5cm}
+    \today
+    \vspace*{.4cm}
+
+    \phone \\
+    \email
+    \vspace*{.4cm}
+    
+    \github \\
+    \linkedin
+    \vspace*{.4cm}
+
+    \small Written in \LaTeX.
+\end{minipage}
+\begin{minipage}[t]{.01\linewidth}$ $\end{minipage}
+\begin{minipage}[t]{.69\linewidth}
+    \begin{center}
+        \Huge \name
+    \end{center}
+    \vspace*{1.89cm}
+    \hrule
+    \vspace*{.49cm}
+
+    To Whom It May Concern,
+    \vspace*{.49cm}
+
+    % \position
+    % \vspace*{.49cm}
+
+    I am a passionate Software Engineer who lives to solve problems. I have been coding ever since I first discovered Lua while playing Roblox. Most of my time outside of work and school is spent discovering new technologies, like the recent Serverless framework.
+    \vspace*{.49cm}
+
+    Although programming is my passion, I also have other hobbies like long-distance cycling and rock climbing. I've ridden all over Florida, from Blue Springs to Tampa and from South Beach to Jupiter.
+    \vspace*{.49cm}
+
+    I'm also excited to say that I'm now a true entrepreneur. I've been busy launching a stock trading social media called Imperium Analytics. We're almost ready to launch our Discord server and the alpha version of our mobile application. This application will provide a safe crowd-sourced learning ecosystem for anyone interesting in learning about trading.
+    \vspace*{.49cm}
+
+    Although the latter does take up a good chunk of my time, I'm also an active member of the Kaggle community. Given that another one of my passions is Statistics, I find joy in participating in these Data Science competitions and quantitatively watching my skills grow via their leaderboards.
+    \vspace*{.49cm}
+
+    If anything can be taken from this letter is that I'm a hard worker and a team player. I'm always looking for the next challenge and \company can definitely provide an infinite amount of challenging problems for me to solve. If I'm able to join \company this would greatly increase my ability to learn and grow within my field.
+    \vspace*{.49cm}
+
+    I appreciate your time and I look forward to hearing from you regarding the next steps!
+    \vspace*{.49cm}
+
+    Regards,
+    \vspace*{.49cm}
+
+    \name
+\end{minipage}
+
+
+
+
+\end{document}
+
+% 
+% https://careers.google.com/jobs/results/122171865427780294/
