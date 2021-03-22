@@ -1,15 +1,19 @@
 \documentclass{article}
-\usepackage[hmargin=.75cm, vmargin=.75cm]{geometry}
-\usepackage[shortlabels,inline]{enumitem}
-\usepackage{amsmath, amssymb, array, booktabs, multicol, multirow, hyperref}
 
+% imports
+\usepackage[margin=.4cm, voffset=-.15cm]{geometry}
+\usepackage[shortlabels,inline]{enumitem}
+\usepackage{amsmath, amssymb, array, booktabs, multicol, multirow, hyperref, raleway}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% custom commands
 \newcommand{\name}{Manuel Vasquez}
 \newcommand{\website}{\href{https://www.github.com/vadmanuel}{Github=vadManuel} | \href{https://www.linkedin.com/in/vadmanuel}{LinkedIn=vadManuel}}
-% \newcommand{\website}{http://www.vadmanuel.com}
 \newcommand{\email}{\href{mailto:vadmanuel@knights.ucf.edu}{vadmanuel@knights.ucf.edu}}
 \newcommand{\phone}{\href{tel:+14079140175}{+1 (407) 914-0175}}
 \newcommand{\makeminipage}[4]{
-    \begin{minipage}[c]{.7\linewidth}
+    \begin{minipage}[c]{.7\linewidth} 
         \flushleft #1 \\ #2
     \end{minipage} \hfill
     \begin{minipage}[c]{.29\linewidth}
@@ -17,11 +21,14 @@
     \end{minipage}
 }
 \newcommand{\makesection}[1]{\hrule\vskip1mm\uppercase{#1}\vskip1mm\hrule}
+
 \pagenumbering{gobble}
+
 
 \begin{document}
 \setlength{\parindent}{0cm}
 
+% header
 \makeminipage
     {{\large\textbf{\name}}}
     {\website}
@@ -29,64 +36,135 @@
     {Phone: \phone}
 \bigbreak
 
+% Education
 \makesection{Education}
 \begin{itemize}[leftmargin=.35cm]
     \item {
     \makeminipage
         {\textbf{University of Central Florida}}
-        {\textit{Bachelor of Science in Computer Science}\hspace*{2mm} \textit{GPA: 3.0} \\
-        \textit{Minor in Statistics}\hspace*{36.4mm} \textit{GPA: 3.7}}
+        {\textit{Bachelor of Science in Computer Science} \\
+        \textit{Minor in Statistics}}
         {Orlando, FL}
         {Spring 2021}
     }
 \end{itemize}
 
-\makesection{Professional Experience}
-\begin{itemize}[leftmargin=.35cm]
-    \item {
-        \makeminipage
-            {\textbf{Software Engineer Intern at Viable Engineering Solutions}}
-            {\href{https://wwww.viablees.com}{viablees.com} | \textit{Contact information available upon request.}}
+\begin{minipage}[t]{.69\linewidth}
+    % Professional Experience
+    \makesection{Professional Experience}
+    \begin{itemize}[leftmargin=.35cm]
+
+        % ViableES
+        \item \makeminipage
+            {\textbf{Siemens @ Viable Innovation Center}}
+            {Software Engineer Intern | \href{https://wwww.viablees.com}{viablees.com}}
             {Orlando, FL}
             {Jan 2020 - Present}
+            \vspace*{-1.5mm}
+            \begin{itemize}[leftmargin=.35cm]
+                \item Structured several internal systems comprising of procurement tools, revenue reporting, and production workflow tracking. Designed REST and GraphQL APIs using Python, ASP.NET Core, and Node.js.
+                \item Deployed several applications as containers using Docker to AWS. Utilized the Serverless framework to create a fully serverless application backend.
+            \end{itemize}
 
-        Deployed several iterations of existing internal-use web applications (ASP.NET Core, React.js, Node.js). These applications were required to meet specific security standards to be deployed into a secured Siemens network. Future projects may be developed utilizing Flutter to lower development time. I am slowly transitioning into the rapid prototyping area, which includes the development of attachments for industrial robotic systems.
-    }
-\end{itemize}
+        % El Aposento
+        \item \makeminipage
+            {\textbf{El Aposento}}
+            {Software Engineer Consultant | Advertising Agency}
+            {Orlando, FL}
+            {Nov 2020 - Present}
+            \vspace*{-1.5mm}
+            \begin{itemize}[leftmargin=.35cm]
+                \item Created e-commerce sites integrated with PayPal, Azul, and other payment APIs.
+                \item Created live news delivery network via website, SMS, and email using AWS SNS. This provides content to thousands of followers.
+            \end{itemize}
 
+        % Imperium Analytics
+        \item \makeminipage
+            {\textbf{Imperium Analytics}}
+            {Co-founder and Lead Back-end Developer | Financial Social Media}
+            {Orlando, FL}
+            {Feb 2021 - Present}
+            \vspace*{-1.5mm}
+            \begin{itemize}[leftmargin=.35cm]
+                \item Manage a team of 4 developers to create the back-end of an upcoming stock trading social media.
+                \item Built a fully serverless back-end designed as a GraphQL API and written in Python.
+            \end{itemize}
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{.01\linewidth}$ $\end{minipage}
+\begin{minipage}[t]{.29\linewidth}
+    % Skills
+    \makesection{Technologies \& Skills}
+    \vspace*{3.75mm}
+
+    \textbf{Selected Skills} \\
+    \textbf{Web:} Spanish \\
+    \textbf{Proficient:} Python, ASP.NET Core, Node.js, Flask, Serverless Framework, \LaTeX, GraphQL, React.js
+    \vspace*{2mm}
+
+    \textbf{Data Science | HPC} \\
+    \textbf{Proficient:} Python, OpenCV, Pandas, Scikit-learn, TensorFlow 2.0 \\
+    \textbf{Familiar:} R, SLURM
+    \vspace*{2mm}
+    
+    \textbf{Databases} \\
+    \textbf{Proficient:} MySQL, DynamoDB, Firebase Firestore \\
+    \textbf{Familiar:} MongoDB
+    \vspace*{2mm}
+
+    \textbf{Services} \\
+    \textbf{Proficient:} Amazon Web Services \\
+    \textbf{Familiar:} Google Cloud Services
+    \vspace*{2mm}
+
+    \textbf{Spoken Languages} \\
+    \textbf{Native:} Spanish \\
+    \textbf{Fluent:} English
+\end{minipage}
+\vspace*{2mm}
+
+% Projects
 \makesection{Projects}
 \begin{itemize}[leftmargin=.35cm]
-    \item \textbf{UCF101-Sports dataset action recognition} \\
-    Utilized Google's Inception network to extract features and passed them to an RNN in order to maintain spatiotemporal information. Due to the size of the dataset, I used LOO cross-validation and achieved a validation accuracy of 72.87\% on the 10 different actions.
+    % Senior Design
+    \item \textbf{Lockheed Martin's Everglades Behaviour Analytics}
+    \vspace*{-1.5mm}
+    \begin{itemize}[leftmargin=.35cm]
+        \item Create custom metrics to justify player performance for the StarCraft II real-time strategy game.
+        \item Report findings to a committee as "explainable AI" and describe how this can be transferred to the internal Everglades game.
+    \end{itemize}
+
+    % 
     \item \textbf{DJI Tello active hand tracking} \\
-    Gave a Tello drone the ability to be controlled by the palm of a single user. Utilizing OpenPose I was able to track the skeleton of a user in almost any light condition and even if part of their body was covered. The drone maintains the palm of the user-centred in its field of view.
+    Gave a Tello drone the ability to be controlled by the palm of a single user. Utilizing OpenPose I was able to track the skeleton of a user in almost any light condition and even if part of their body was covered. The drone maintains the palm of the user-centered in its field of view.
+
+    % 
     \item \textbf{\textit{KnightyKnights.com} a fitness tracker} \\
-    Our team was comprised of 5 members and had 30 days to build a mobile application and a web counterpart. We utilized Firebase's Firestore as our database and React to build the client-side of our website. The mobile application was built using iOS's Swift language as well as Google's Firebase libraries. Our fitness tracker on the app side is able to track a user's workout via GPS, show the user a map of their current location as well as various statistics, show a live feed of friended posts, participate in competitions, earn coins, and other features. The web site contains all of what the mobile app contains and many statistics regarding user and friends workouts.
-    \item \textbf{Kaggle Competitions - Data} \\
-    I've trained and deployed several models utilizing datasets provided in competitions, including: New Your City Airbnb Open Data, PGA Tour Golf Data, Crimes in Boston, Electric Motor Temperature, and several others.
+    Led a team of 5 members in which we were tasked to build a mobile and web application. We utilized Firebase's Firestore as our database and React.js to build the client-side of our website. The mobile application was built natively using Swift. The application tracks a user's workout and displays this to followers as a feed. Users can participate in competitions and earn fitness coins.
+
+    % Kaggle
+    \item \textbf{Kaggle Competitions} \\
+    Participated in competitions hosted by UCF and consistently placed in the top 10 of about 300 participants. AI@UCF has allowed me to hone my competitive data science skills.
 \end{itemize}
-\makesection{Clubs | Activities | Certification}
+
+% Other random stuff
+\makesection{Clubs | Activities}
 \begin{itemize}[leftmargin=.35cm]
-    \item \textbf{AI@UCF} Active member since Spring 2019
+
+    % AI@UCF
+    \item \textbf{\href{https://ucfai.org}{AI@UCF}} Active member since Spring 2019
+    \vspace*{-1.5mm}
     \begin{itemize}[$\circ$]
         \item \textbf{Core:} Honing and reviewing AI/ML and Data Science in general.
         \item \textbf{Data Science:} A project-based stem of the AI@UCF club that focuses on honing industry skills through real-world application. We explore untouched datasets and make new discoveries as they relate to the fields of AI, ML, and Data Science in general.
     \end{itemize}
-    \item \textbf{UCF Robotics Club} Laki2 Drone Payload Delivery Team \\
-    This drone is the Robotics Club's first entry into the AUVSI SUAS competition. My task in this project was to create shape and character recognition models. We ran into data issues from the beginning since all we had was artificially created pictures of the landscape, so I was tasked with training a relaxed baseline model.
-    \item \textbf{UCF Programming Team:} Members meet every Saturday morning for a 2-hour lecture and 4-hour mock contest.
-    \item \textbf{Coursera Machine Learning by Andrew Ng}
+
+    % Robotics Club
+    \item \textbf{\href{https://robotics.ucf.edu/projects/2019}{UCF Robotics Club}} Laki2 Drone Payload Delivery Team \\
+    This drone is the Robotics Club's first entry into the AUVSI SUAS competition. I was part of the computer vision team whose task was to develop the drone's smart vision system, capable of understanding and reporting elements of its environment.
+
+    % UCF Programming Team
+    \item \textbf{\href{https://www.ucfprogrammingteam.org}{UCF Programming Team:}} Members meet every Saturday morning for a 2-hour lecture and 4-hour mock contest.
 \end{itemize}
-    
-\makesection{Programming Languages | Technologies}
-\vspace*{-2mm}
-\begin{multicols}{2}\begin{itemize}[leftmargin=.35cm]
-    \setlength\itemsep{-.1cm}
-    \item C, C\#, \LaTeX, Javascript, Python, Swift
-    \item Keras TensorFlow, PyTorch
-    \item Unity3D, Unity's MLAgents
-    \item Amazon Web Services, Google Cloud Services
-    \item MySQL, Firebase, MongoDB
-    \item ASP.NET Core, React
-\end{itemize}\end{multicols}
+
 \end{document}
