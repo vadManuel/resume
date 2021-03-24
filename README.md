@@ -29,6 +29,12 @@
 
 1. [Software Engineer, Hybrid Cloud Storage (Kubernetes)](https://careers.google.com/jobs/results/142550943410332358/)
 
+### Microsoft
+
+1. https://careers.microsoft.com/us/en/job/919623/Software-Engineer-Data-analytics-and-engineering-for-Teams-meetings
+1. https://careers.microsoft.com/us/en/job/877815/Full-Time-Opportunities-for-Students-and-Recent-Graduates-Software-Engineering
+1. https://careers.microsoft.com/us/en/job/876897/Full-Time-Opportunities-for-Students-and-Recent-Graduates-Norway-Software-Engineering
+
 <!--
 
 To Whom It May Concern,
